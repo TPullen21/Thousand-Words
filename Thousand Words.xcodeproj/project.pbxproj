@@ -10,11 +10,11 @@
 		DD0178D61A38EB8C002EF162 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0178D51A38EB8C002EF162 /* main.m */; };
 		DD0178D91A38EB8C002EF162 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0178D81A38EB8C002EF162 /* AppDelegate.m */; };
 		DD0178DC1A38EB8C002EF162 /* Thousand_Words.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD0178DA1A38EB8C002EF162 /* Thousand_Words.xcdatamodeld */; };
-		DD0178DF1A38EB8C002EF162 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0178DE1A38EB8C002EF162 /* ViewController.m */; };
-		DD0178E21A38EB8C002EF162 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0178E01A38EB8C002EF162 /* Main.storyboard */; };
 		DD0178E41A38EB8C002EF162 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD0178E31A38EB8C002EF162 /* Images.xcassets */; };
-		DD0178E71A38EB8C002EF162 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD0178E51A38EB8C002EF162 /* LaunchScreen.xib */; };
 		DD0178F31A38EB8C002EF162 /* Thousand_WordsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0178F21A38EB8C002EF162 /* Thousand_WordsTests.m */; };
+		DD0178FF1A38F859002EF162 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0178FE1A38F859002EF162 /* Storyboard.storyboard */; };
+		DD0179021A38F8FE002EF162 /* AlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0179011A38F8FE002EF162 /* AlbumTableViewController.m */; };
+		DD0179051A390077002EF162 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0179041A390077002EF162 /* Album.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +34,15 @@
 		DD0178D71A38EB8C002EF162 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DD0178D81A38EB8C002EF162 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DD0178DB1A38EB8C002EF162 /* Thousand_Words.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Thousand_Words.xcdatamodel; sourceTree = "<group>"; };
-		DD0178DD1A38EB8C002EF162 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DD0178DE1A38EB8C002EF162 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		DD0178E11A38EB8C002EF162 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD0178E31A38EB8C002EF162 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		DD0178E61A38EB8C002EF162 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DD0178EC1A38EB8C002EF162 /* Thousand WordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thousand WordsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD0178F11A38EB8C002EF162 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD0178F21A38EB8C002EF162 /* Thousand_WordsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Thousand_WordsTests.m; sourceTree = "<group>"; };
+		DD0178FE1A38F859002EF162 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = ../Storyboard.storyboard; sourceTree = "<group>"; };
+		DD0179001A38F8FE002EF162 /* AlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumTableViewController.h; sourceTree = "<group>"; };
+		DD0179011A38F8FE002EF162 /* AlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumTableViewController.m; sourceTree = "<group>"; };
+		DD0179031A390077002EF162 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
+		DD0179041A390077002EF162 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,14 +84,13 @@
 		DD0178D21A38EB8C002EF162 /* Thousand Words */ = {
 			isa = PBXGroup;
 			children = (
-				DD0178D71A38EB8C002EF162 /* AppDelegate.h */,
-				DD0178D81A38EB8C002EF162 /* AppDelegate.m */,
-				DD0178DD1A38EB8C002EF162 /* ViewController.h */,
-				DD0178DE1A38EB8C002EF162 /* ViewController.m */,
-				DD0178E01A38EB8C002EF162 /* Main.storyboard */,
+				DD0178FE1A38F859002EF162 /* Storyboard.storyboard */,
+				DD0179001A38F8FE002EF162 /* AlbumTableViewController.h */,
+				DD0179011A38F8FE002EF162 /* AlbumTableViewController.m */,
 				DD0178E31A38EB8C002EF162 /* Images.xcassets */,
-				DD0178E51A38EB8C002EF162 /* LaunchScreen.xib */,
 				DD0178DA1A38EB8C002EF162 /* Thousand_Words.xcdatamodeld */,
+				DD0179031A390077002EF162 /* Album.h */,
+				DD0179041A390077002EF162 /* Album.m */,
 				DD0178D31A38EB8C002EF162 /* Supporting Files */,
 			);
 			path = "Thousand Words";
@@ -99,6 +99,8 @@
 		DD0178D31A38EB8C002EF162 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DD0178D71A38EB8C002EF162 /* AppDelegate.h */,
+				DD0178D81A38EB8C002EF162 /* AppDelegate.m */,
 				DD0178D41A38EB8C002EF162 /* Info.plist */,
 				DD0178D51A38EB8C002EF162 /* main.m */,
 			);
@@ -202,9 +204,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD0178E21A38EB8C002EF162 /* Main.storyboard in Resources */,
-				DD0178E71A38EB8C002EF162 /* LaunchScreen.xib in Resources */,
 				DD0178E41A38EB8C002EF162 /* Images.xcassets in Resources */,
+				DD0178FF1A38F859002EF162 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,9 +223,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD0179021A38F8FE002EF162 /* AlbumTableViewController.m in Sources */,
 				DD0178D91A38EB8C002EF162 /* AppDelegate.m in Sources */,
 				DD0178D61A38EB8C002EF162 /* main.m in Sources */,
-				DD0178DF1A38EB8C002EF162 /* ViewController.m in Sources */,
+				DD0179051A390077002EF162 /* Album.m in Sources */,
 				DD0178DC1A38EB8C002EF162 /* Thousand_Words.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,25 +248,6 @@
 			targetProxy = DD0178ED1A38EB8C002EF162 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		DD0178E01A38EB8C002EF162 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DD0178E11A38EB8C002EF162 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DD0178E51A38EB8C002EF162 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DD0178E61A38EB8C002EF162 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DD0178F41A38EB8C002EF162 /* Debug */ = {
