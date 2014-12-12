@@ -15,6 +15,10 @@
 		DD0178FF1A38F859002EF162 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0178FE1A38F859002EF162 /* Storyboard.storyboard */; };
 		DD0179021A38F8FE002EF162 /* AlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0179011A38F8FE002EF162 /* AlbumTableViewController.m */; };
 		DD0179051A390077002EF162 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0179041A390077002EF162 /* Album.m */; };
+		DD59D1691A3BABA8007B6813 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DD59D1681A3BABA8007B6813 /* CoreDataHelper.m */; };
+		DD59D16C1A3BAEC8007B6813 /* PhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD59D16B1A3BAEC8007B6813 /* PhotosCollectionViewController.m */; };
+		DD59D16F1A3BB1E2007B6813 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD59D16E1A3BB1E2007B6813 /* PhotoCollectionViewCell.m */; };
+		DD59D1711A3BB3E1007B6813 /* astronaut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD59D1701A3BB3E1007B6813 /* astronaut.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,13 @@
 		DD0179011A38F8FE002EF162 /* AlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumTableViewController.m; sourceTree = "<group>"; };
 		DD0179031A390077002EF162 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
 		DD0179041A390077002EF162 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
+		DD59D1671A3BABA8007B6813 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
+		DD59D1681A3BABA8007B6813 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
+		DD59D16A1A3BAEC8007B6813 /* PhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosCollectionViewController.h; sourceTree = "<group>"; };
+		DD59D16B1A3BAEC8007B6813 /* PhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosCollectionViewController.m; sourceTree = "<group>"; };
+		DD59D16D1A3BB1E2007B6813 /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		DD59D16E1A3BB1E2007B6813 /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		DD59D1701A3BB3E1007B6813 /* astronaut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = astronaut.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +96,14 @@
 			isa = PBXGroup;
 			children = (
 				DD0178FE1A38F859002EF162 /* Storyboard.storyboard */,
+				DD59D16D1A3BB1E2007B6813 /* PhotoCollectionViewCell.h */,
+				DD59D16E1A3BB1E2007B6813 /* PhotoCollectionViewCell.m */,
+				DD59D16A1A3BAEC8007B6813 /* PhotosCollectionViewController.h */,
+				DD59D16B1A3BAEC8007B6813 /* PhotosCollectionViewController.m */,
 				DD0179001A38F8FE002EF162 /* AlbumTableViewController.h */,
 				DD0179011A38F8FE002EF162 /* AlbumTableViewController.m */,
+				DD59D1671A3BABA8007B6813 /* CoreDataHelper.h */,
+				DD59D1681A3BABA8007B6813 /* CoreDataHelper.m */,
 				DD0178E31A38EB8C002EF162 /* Images.xcassets */,
 				DD0178DA1A38EB8C002EF162 /* Thousand_Words.xcdatamodeld */,
 				DD0179031A390077002EF162 /* Album.h */,
@@ -99,6 +116,7 @@
 		DD0178D31A38EB8C002EF162 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DD59D1701A3BB3E1007B6813 /* astronaut.jpg */,
 				DD0178D71A38EB8C002EF162 /* AppDelegate.h */,
 				DD0178D81A38EB8C002EF162 /* AppDelegate.m */,
 				DD0178D41A38EB8C002EF162 /* Info.plist */,
@@ -204,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD59D1711A3BB3E1007B6813 /* astronaut.jpg in Resources */,
 				DD0178E41A38EB8C002EF162 /* Images.xcassets in Resources */,
 				DD0178FF1A38F859002EF162 /* Storyboard.storyboard in Resources */,
 			);
@@ -223,9 +242,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD59D1691A3BABA8007B6813 /* CoreDataHelper.m in Sources */,
 				DD0179021A38F8FE002EF162 /* AlbumTableViewController.m in Sources */,
 				DD0178D91A38EB8C002EF162 /* AppDelegate.m in Sources */,
+				DD59D16C1A3BAEC8007B6813 /* PhotosCollectionViewController.m in Sources */,
 				DD0178D61A38EB8C002EF162 /* main.m in Sources */,
+				DD59D16F1A3BB1E2007B6813 /* PhotoCollectionViewCell.m in Sources */,
 				DD0179051A390077002EF162 /* Album.m in Sources */,
 				DD0178DC1A38EB8C002EF162 /* Thousand_Words.xcdatamodeld in Sources */,
 			);
@@ -399,6 +421,7 @@
 				DD0178F81A38EB8C002EF162 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DD0178F91A38EB8C002EF162 /* Build configuration list for PBXNativeTarget "Thousand WordsTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +430,7 @@
 				DD0178FB1A38EB8C002EF162 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

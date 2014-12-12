@@ -7,6 +7,8 @@
 //
 
 #import "AlbumTableViewController.h"
+#import "Album.h"
+#import "CoreDataHelper.h"
 
 @interface AlbumTableViewController () <UIAlertViewDelegate>
 
@@ -19,12 +21,6 @@
     return _albums;
 }
 
-- (IBAction)addAlbumBarButtonItemPressed:(UIBarButtonItem *)sender {
-    UIAlertView *newAlbumAlertView = [[UIAlertView alloc] initWithTitle:@"Enter New Album Name" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add", nil];
-    [newAlbumAlertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
-    [newAlbumAlertView show];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -35,9 +31,51 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Album"];
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES]];
+    
+    NSError *error = nil;
+    
+    NSArray *fetchedAlbums = [[CoreDataHelper managedObjectContext] executeFetchRequest:fetchRequest error:&error];
+    
+    self.albums = [fetchedAlbums mutableCopy];
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark -IBActions
+
+- (IBAction)addAlbumBarButtonItemPressed:(UIBarButtonItem *)sender {
+    UIAlertView *newAlbumAlertView = [[UIAlertView alloc] initWithTitle:@"Enter New Album Name" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add", nil];
+    [newAlbumAlertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    [newAlbumAlertView show];
+}
+
+#pragma mark - Helper Methods
+
+- (Album *)albumWithName:(NSString *)name
+{
+     NSManagedObjectContext *context = [CoreDataHelper managedObjectContext];
+    
+    Album *album = [NSEntityDescription insertNewObjectForEntityForName:@"Album" inManagedObjectContext:context];
+    album.name = name;
+    album.date = [NSDate date];
+    
+    NSError *error = nil;
+    
+    if (![context save:&error]) {
+        // We have an error
+        NSLog(@"%@", error);
+    }
+    
+    return album;
 }
 
 #pragma mark - UIAlertViewDelegate
@@ -45,7 +83,9 @@
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
         NSString *alertText = [alertView textFieldAtIndex:0].text;
-        NSLog(@"My new album is %@", alertText);
+        [self.albums addObject:[self albumWithName:alertText]];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.albums count]-1 inSection:0];
+        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
 
@@ -53,7 +93,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -61,15 +101,17 @@
     return [self.albums count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
     
+    Album *selectedAlbum = self.albums[indexPath.row];
+    cell.textLabel.text = selectedAlbum.name;
+    
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
